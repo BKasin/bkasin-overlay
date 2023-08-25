@@ -6,8 +6,7 @@
 		<name>Bailey Kasin</name>
 	</maintainer>
 	<stabilize-allarches />
-	<longdescription lang="en">
-		hyfetch builds upon neofetch to add pride flag coloration to the OS
+	<longdescription lang="en"> hyfetch builds upon neofetch to add pride flag coloration to the OS
 		logo, and also maintains the standard version of neofetch with bug fixes and new features,
 		as the original project is un-maintained. </longdescription>
 	<upstream>

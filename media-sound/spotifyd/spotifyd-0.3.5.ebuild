@@ -409,6 +409,6 @@ BDEPEND=""
 QA_FLAGS_IGNORED="usr/bin/spotifyd"
 
 src_install() {
-    cargo_src_install
-    systemd_dounit "${FILESDIR}"/spotifyd.service
+	cargo_src_install
+    systemd_douserunit "${FILESDIR}"/spotifyd.service
 }
