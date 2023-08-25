@@ -20,7 +20,10 @@ RDEPEND="
 "
 
 pkg_postinst() {
+	optfeature "displaying images" "media-libs/imlib2 www-client/w3m[imlib]"
 	optfeature "gpu detection" sys-apps/pciutils
+	optfeature "thumbnail creation" media-gfx/imagemagick
+	optfeature "wallpaper" media-gfx/feh x11-misc/nitrogen
 	optfeature "window size" x11-misc/xdotool "x11-apps/xwininfo x11-apps/xprop" "x11-apps/xwininfo x11-apps/xdpyinfo"
 	elog "The standard neofetch is installed as 'neowofetch', to avoid name conflicts."
 	elog "So if you do not wish to use the pride flag functionality, you can call the"
