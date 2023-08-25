@@ -397,6 +397,7 @@ SRC_URI="https://github.com/Spotifyd/${PN}/archive/refs/tags/v${PV}.tar.gz
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD BSD-2 Boost-1.0 GPL-3 ISC LGPL-3 MIT MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
 SLOT="0"
 KEYWORDS="amd64"
+IUSE="+alsa pulseaudio portaudio rodio dbus"
 
 DEPEND=""
 RDEPEND="${DEPEND}
@@ -407,6 +408,27 @@ BDEPEND=""
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
 QA_FLAGS_IGNORED="usr/bin/spotifyd"
+
+src_configure() {
+	local myfeatures=()
+	if use alsa; then
+		myfeatures+=( "alsa_backend" )
+	fi
+	if use pulseaudio; then
+		myfeatures+=( "pulseaudio_backend" )
+	fi
+	if use portaudio; then
+		myfeatures+=( "portaudio_backend" )
+	fi
+	if use rodio; then
+		myfeatures+=( "rodio_backend" )
+	fi
+	if use dbus; then
+		myfeatures+=( "dbus_keyring" "dbus_mpris" )
+	fi
+
+	cargo_src_configure --no-default-features
+}
 
 src_install() {
 	cargo_src_install
