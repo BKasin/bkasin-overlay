@@ -396,10 +396,13 @@ SRC_URI="https://github.com/Spotifyd/${PN}/archive/refs/tags/v${PV}.tar.gz
 # use cargo-license for a more accurate license picture
 LICENSE="0BSD Apache-2.0 Apache-2.0-with-LLVM-exceptions BSD BSD-2 Boost-1.0 GPL-3 ISC LGPL-3 MIT MPL-2.0 Unicode-DFS-2016 Unlicense ZLIB"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE="+alsa pulseaudio portaudio rodio dbus"
 
-DEPEND=""
+DEPEND="alsa? (media-libs/alsa-lib)
+	portaudio? (media-libs/portaudio)
+	pulseaudio? (media-sound/pulseaudio)
+	dbus? (sys-apps/dbus)"
 RDEPEND="${DEPEND}
 	virtual/rust
 "
