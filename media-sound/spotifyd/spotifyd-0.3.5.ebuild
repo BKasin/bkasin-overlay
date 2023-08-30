@@ -399,10 +399,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="+alsa pulseaudio portaudio rodio dbus"
 
-DEPEND="alsa? (media-libs/alsa-lib)
-	portaudio? (media-libs/portaudio)
-	pulseaudio? (media-sound/pulseaudio)
-	dbus? (sys-apps/dbus)"
+DEPEND="alsa? ( media-libs/alsa-lib )
+	portaudio? ( media-libs/portaudio )
+	pulseaudio? ( media-sound/pulseaudio )
+	dbus? ( sys-apps/dbus )"
 RDEPEND="${DEPEND}
 	virtual/rust
 "
