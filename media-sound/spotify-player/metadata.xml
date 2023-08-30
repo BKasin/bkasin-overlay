@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <maintainer type="person">
+        <email>baileykasin@gmail.com</email>
+        <name>Bailey Kasin</name>
+    </maintainer>
+    <stabilize-allarches />
+    <longdescription lang="en"> A terminal spotify player that is feature parity with the official
+        client </longdescription>
+    <use>
+        <flag name="alsa">Enable the alsa backend for audio playback</flag>
+        <flag name="pulseaudio">Enable the pulseaudio backend for audio playback</flag>
+        <flag name="portaudio">Enable the portaudio backend for audio playback</flag>
+        <flag name="rodio">Enable the rodio backend for audio playback</flag>
+        <flag name="jack">Enable the JACK2 backend for audio playback</flag>
+        <flag name="rodiojack">Enable the JACK2 over rodio backend for audio playback</flag>
+        <flag name="sdl">Enable the SDL2 backend for audio playback</flag>
+        <flag name="gstreamer">Enable the gstreamer backend for audio playback</flag>
+        <flag name="streaming">Enable streaming support with librespot, pulls in alsa</flag>
+        <flag name="lyric-finding">Add the ability to search for current song lyrics</flag>
+        <flag name="media-control">Enable the JACK2 backend for audio playback</flag>
+        <flag name="image">Display album art (requires kitty terminal for proper image)</flag>
+        <flag name="sixel">Use libsixel for image display</flag>
+        <flag name="notify">Enable desktop notification support</flag>
+        <flag name="daemon">Enable the -d/--daemon flag</flag>
+    </use>
+    <upstream>
+        <remote-id type="github">Spotifyd/spotifyd</remote-id>
+        <bugs-to>https://github.com/Spotifyd/spotifyd/issues</bugs-to>
+    </upstream>
+</pkgmetadata>
