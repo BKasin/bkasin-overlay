@@ -528,15 +528,15 @@ KEYWORDS="~amd64"
 IUSE="+rodio +media-control alsa pulseaudio portaudio jack rodiojack sdl gstreamer lyric-finder streaming image sixel notify daemon"
 REQUIRED_USE="daemon? ( streaming )"
 
-DEPEND="alsa? (media-libs/alsa-lib)
-	portaudio? (media-libs/portaudio)
-	pulseaudio? (media-sound/pulseaudio)
-	jack? (media-sound/jack2)
-	sdl? (media-libs/libsdl2)
-	gstreamer? (media-libs/gstreamer)
-	sixel? (media-libs/libsixel)
-	media-control? (sys-apps/dbus)
-	streaming? (media-libs/alsa-lib)
+DEPEND="alsa? ( media-libs/alsa-lib )
+	portaudio? ( media-libs/portaudio )
+	pulseaudio? ( media-sound/pulseaudio )
+	jack? ( media-sound/jack2 )
+	sdl? ( media-libs/libsdl2 )
+	gstreamer? ( media-libs/gstreamer )
+	sixel? ( media-libs/libsixel )
+	media-control? ( sys-apps/dbus )
+	streaming? ( media-libs/alsa-lib )
 	dev-libs/openssl"
 RDEPEND="${DEPEND}
 	virtual/rust
