@@ -539,11 +539,9 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 	streaming? ( media-libs/alsa-lib )
 	dev-libs/openssl"
 RDEPEND="${DEPEND}
-	virtual/rust
+	>=virtual/rust-1.71.0
 "
-BDEPEND="
-	>=dev-lang/rust-1.71.0
-"
+BDEPEND=""
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
