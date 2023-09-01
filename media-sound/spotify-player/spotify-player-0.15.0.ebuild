@@ -541,7 +541,9 @@ DEPEND="alsa? ( media-libs/alsa-lib )
 RDEPEND="${DEPEND}
 	virtual/rust
 "
-BDEPEND=""
+BDEPEND="
+	>=dev-lang/rust-1.71.0
+"
 
 # rust does not use *FLAGS from make.conf, silence portage warning
 # update with proper path to binaries this crate installs, omit leading /
@@ -599,5 +601,5 @@ src_configure() {
 }
 
 src_install() {
-	cargo_src_install
+	cargo_src_install --path ./spotify_player
 }
