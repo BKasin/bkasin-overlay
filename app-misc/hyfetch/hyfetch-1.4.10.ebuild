@@ -19,6 +19,10 @@ RDEPEND="
 		dev-python/typing-extensions[${PYTHON_USEDEP}]
 "
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.4.10-config_fix.patch
+)
+
 pkg_postinst() {
 	optfeature "displaying images" "media-libs/imlib2 www-client/w3m[imlib]"
 	optfeature "gpu detection" sys-apps/pciutils
